@@ -42,7 +42,11 @@ dependencies:
   #animasyon
   flutter_spinkit: ^5.1.0
 
+  #Cache
+  shared_preferences: ^2.0.15
 
+  #Cache-Secure
+  flutter_secure_storage: ^5.0.2
 
 dev_dependencies:
   flutter_test:

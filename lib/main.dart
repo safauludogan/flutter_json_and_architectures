@@ -6,6 +6,9 @@ import 'package:flutter_json_hardwareandro/theme_learn_view.dart';
 import 'package:flutter_json_hardwareandro/widget_size_enum_learn_view.dart';
 
 import 'animated_learn.dart';
+import 'cache/secure_context/secure_context_learn.dart';
+import 'cache/shared_learn_cache.dart';
+import 'cache/shared_list_cache.dart';
 import 'form_learn_view.dart';
 import 'image_learn_202.dart';
 import 'oop_learn_view.dart';
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       title: 'Json',
-      home: const FormLearnView(),
+      home: const SharedContextLearn(),
     );
   }
 }
