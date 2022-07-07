@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_json_hardwareandro/state_manage/state_manage_learn_view.dart';
+import 'package:flutter_json_hardwareandro/202/state_manage/state_manage_learn_view.dart';
 
 abstract class StateLearnViewModel extends State<StateManageLearnView>{
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_json_hardwareandro/package/launch_manager.dart';
+import 'package:flutter_json_hardwareandro/202/package/launch_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package/loading_bar.dart';

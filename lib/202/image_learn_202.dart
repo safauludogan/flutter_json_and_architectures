@@ -26,7 +26,10 @@ extension ImagePathsExtension on ImagePaths {
     return 'assets/images/$name.jpg';
   }
 
-  Widget toWidget({double height = 24}){
-    return Image.asset(path(),height: height,);
+  Widget toWidget({double height = 24}) {
+    return Image.asset(
+      path(),
+      height: height,
+    );
   }
 }

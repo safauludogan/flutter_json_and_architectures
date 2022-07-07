@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_json_hardwareandro/service/post_model.dart';
+import 'package:flutter_json_hardwareandro/202/service/post_model.dart';
 
 class ServicePostLearn extends StatefulWidget {
   const ServicePostLearn({Key? key}) : super(key: key);
@@ -35,11 +35,12 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
       _isLoading = !_isLoading;
     });
   }
-  void _addItemToService(PostModel postModel) async{
-    _changeLoading();
-    final response = await _networkManagerDio.post('posts',data: postModel);
 
-    if(response.statusCode == HttpStatus.created){
+  void _addItemToService(PostModel postModel) async {
+    _changeLoading();
+    final response = await _networkManagerDio.post('posts', data: postModel);
+
+    if (response.statusCode == HttpStatus.created) {
       name = 'Başarılı';
     }
     _changeLoading();
@@ -52,7 +53,7 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
         actions: [
           _isLoading
               ? const CircularProgressIndicator.adaptive(
-              backgroundColor: Colors.white)
+                  backgroundColor: Colors.white)
               : const SizedBox.shrink()
         ],
       ),
@@ -76,15 +77,20 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
             decoration: const InputDecoration(labelText: 'UserId'),
           ),
           TextButton(
-              onPressed: _isLoading ? null : () {
-            if (_titleController.text.isNotEmpty &&
-                _bodyController.text.isNotEmpty &&
-                _userIdController.text.isNotEmpty){
-
-              var model = PostModel(body: _bodyController.text,title: _titleController.text,userId: int.tryParse(_userIdController.text));
-              _addItemToService(model);
-            }
-          }, child: const Text("Send"))
+              onPressed: _isLoading
+                  ? null
+                  : () {
+                      if (_titleController.text.isNotEmpty &&
+                          _bodyController.text.isNotEmpty &&
+                          _userIdController.text.isNotEmpty) {
+                        var model = PostModel(
+                            body: _bodyController.text,
+                            title: _titleController.text,
+                            userId: int.tryParse(_userIdController.text));
+                        _addItemToService(model);
+                      }
+                    },
+              child: const Text("Send"))
         ],
       ),
     );

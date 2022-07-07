@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_json_hardwareandro/service/comments_learn_view.dart';
-import 'package:flutter_json_hardwareandro/service/post_model.dart';
-import 'package:flutter_json_hardwareandro/service/post_service.dart';
+import 'package:flutter_json_hardwareandro/202/service/comments_learn_view.dart';
+import 'package:flutter_json_hardwareandro/202/service/post_model.dart';
+import 'package:flutter_json_hardwareandro/202/service/post_service.dart';
 
 class ServiceLearn extends StatefulWidget {
   const ServiceLearn({Key? key}) : super(key: key);

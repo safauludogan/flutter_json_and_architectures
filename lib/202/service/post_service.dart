@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_json_hardwareandro/service/comment_model.dart';
-import 'package:flutter_json_hardwareandro/service/post_model.dart';
+import 'package:flutter_json_hardwareandro/202/service/comment_model.dart';
+import 'package:flutter_json_hardwareandro/202/service/post_model.dart';
 
 abstract class IPostService {
   Future<bool> addItemToService(PostModel postModel);
